@@ -42,13 +42,19 @@ const CoordinateForm: React.FC<CoordinateFormProps> = ({ onSubmit }) => {
           Enter Coordinates
         </label>
         <Textarea
-          placeholder="Enter latitude and longitude pairs, separated by commas (e.g., 51.5074, -0.1278, 48.8566, 2.3522)"
+          placeholder="Enter coordinates in any format:&#13;&#10;51.5074° N, 0.1278° W&#13;&#10;or&#13;&#10;51.5074, -0.1278"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           className="min-h-[120px] glass"
         />
         <p className="text-sm text-muted-foreground">
-          Format: lat1, lng1, lat2, lng2, ... (max 15 pairs)
+          Supports both formats:
+          <br />
+          • Google Maps format (51.5074° N, 0.1278° W)
+          <br />
+          • Simple format (51.5074, -0.1278)
+          <br />
+          Max 15 pairs
         </p>
       </div>
 
